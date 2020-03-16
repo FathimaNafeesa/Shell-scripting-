@@ -1,4 +1,4 @@
-#! /bin/bash 
+ #! /bin/bash 
 echo "Enter the number of coupon numbers"
 read N
 declare -a coupon_num
@@ -15,14 +15,12 @@ while [ ${#coupon_num[@]} -le 999 ]
 do
 	X=$(( RANDOM % 1000))
 
-
 		if [ ! ${coupon_num[ $X ]} ] 
 		then
 			L=${#coupon_num[@]}
 			coupon_num[$L]=$X
-		
-			((random_numbers_needed++))
 
+			((random_numbers_needed++))
 		fi
 done
 
